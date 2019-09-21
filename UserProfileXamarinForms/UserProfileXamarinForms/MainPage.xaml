@@ -129,7 +129,7 @@
             BackgroundColor="#FAF7F7"
             Spacing="0" />
 
-        <!--  TODO : Stats  -->
+        <!--  Stats  -->
         <pancakeView:PancakeView
             Grid.Row="1"
             Margin="20,-30,20,0"
@@ -137,6 +137,89 @@
             CornerRadius="20"
             HasShadow="True"
             HeightRequest="72"
-            VerticalOptions="Start" />
+            VerticalOptions="Start">
+            <Grid
+                Padding="0,8"
+                ColumnSpacing="0"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    Spacing="0"
+                    VerticalOptions="Center">
+                    <Label
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        Text="500"
+                        TextColor="#202020" />
+                    <Label
+                        FontSize="Caption"
+                        HorizontalOptions="Center"
+                        Text="Posts"
+                        TextColor="#949494" />
+                </StackLayout>
+
+                <BoxView
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0,12"
+                    HeightRequest="0"
+                    HorizontalOptions="End"
+                    VerticalOptions="Fill"
+                    WidthRequest="1"
+                    Color="#E7E7E7" />
+
+                <StackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+                    Spacing="0"
+                    VerticalOptions="Center">
+                    <Label
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        Text="12"
+                        TextColor="#202020" />
+                    <Label
+                        FontSize="Caption"
+                        HorizontalOptions="Center"
+                        Text="Followers"
+                        TextColor="#949494" />
+                </StackLayout>
+
+                <BoxView
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="0,12"
+                    HeightRequest="0"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Fill"
+                    WidthRequest="1"
+                    Color="#E7E7E7" />
+
+                <StackLayout
+                    Grid.Column="2"
+                    HorizontalOptions="Center"
+                    Spacing="0"
+                    VerticalOptions="Center">
+                    <Label
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        Text="117"
+                        TextColor="#202020" />
+                    <Label
+                        FontSize="Caption"
+                        HorizontalOptions="Center"
+                        Text="Following"
+                        TextColor="#949494" />
+                </StackLayout>
+
+            </Grid>
+        </pancakeView:PancakeView>
     </Grid>
 </ContentPage>
