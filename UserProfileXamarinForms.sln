@@ -7,7 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserProfileXamarinForms.And
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserProfileXamarinForms.iOS", "UserProfileXamarinForms\UserProfileXamarinForms.iOS\UserProfileXamarinForms.iOS.csproj", "{6B8331C2-10A0-45B7-9E3C-01CE9B8E369B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserProfileXamarinForms", "UserProfileXamarinForms\UserProfileXamarinForms\UserProfileXamarinForms.csproj", "{1F2F8D4C-BF34-4D02-94EC-44D1B6DE0FFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserProfileXamarinForms", "UserProfileXamarinForms\UserProfileXamarinForms\UserProfileXamarinForms.csproj", "{1F2F8D4C-BF34-4D02-94EC-44D1B6DE0FFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B08FA056-A460-4C01-8CEB-C0E6F1363BDC}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+		screenshot_landscape.jpg = screenshot_landscape.jpg
+		screenshot_portrait.jpg = screenshot_portrait.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
