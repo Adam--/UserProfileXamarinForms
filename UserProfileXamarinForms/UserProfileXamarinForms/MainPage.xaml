@@ -14,212 +14,267 @@
         <ToolbarItem Order="Secondary" Text="More info" />
     </ContentPage.ToolbarItems>
 
-    <Grid
-        Padding="0"
-        ColumnSpacing="0"
-        RowSpacing="0">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <ScrollView>
+        <Grid
+            Padding="0"
+            ColumnSpacing="0"
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-        <Image
-            Grid.Row="0"
-            Opacity="0.7"
-            Source="profile_background"
-            VerticalOptions="Start" />
+            <Image
+                Grid.Row="0"
+                Aspect="AspectFill"
+                Opacity="0.7"
+                Source="profile_background"
+                VerticalOptions="Start" />
 
-        <StackLayout
-            Grid.Row="0"
-            Padding="18,25"
-            Spacing="0">
             <StackLayout
-                Padding="0"
-                Orientation="Horizontal"
-                Spacing="20">
-
-                <!--  Circle profile image with indicator  -->
-                <Grid
+                Grid.Row="0"
+                Padding="18,25"
+                Spacing="0">
+                <StackLayout
                     Padding="0"
-                    HorizontalOptions="Start"
-                    VerticalOptions="Start">
+                    Orientation="Horizontal"
+                    Spacing="20">
 
-                    <pancakeView:PancakeView
-                        BorderColor="White"
-                        BorderThickness="2"
-                        CornerRadius="51"
-                        HeightRequest="102"
-                        WidthRequest="102">
-                        <Image Source="profile_small" />
-                    </pancakeView:PancakeView>
+                    <!--  Circle profile image with indicator  -->
+                    <Grid
+                        Padding="0"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start">
+
+                        <pancakeView:PancakeView
+                            BorderColor="White"
+                            BorderThickness="2"
+                            CornerRadius="51"
+                            HeightRequest="102"
+                            WidthRequest="102">
+                            <Image Source="profile_small" />
+                        </pancakeView:PancakeView>
+
+                        <BoxView
+                            Margin="10"
+                            BackgroundColor="#30F23D"
+                            CornerRadius="5"
+                            HeightRequest="10"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"
+                            WidthRequest="10" />
+                    </Grid>
+
+                    <!--  Interaction buttons  -->
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="EndAndExpand"
+                        Source="message_icon"
+                        VerticalOptions="Center" />
+                    <Button
+                        BackgroundColor="White"
+                        CornerRadius="25"
+                        FontAttributes="Bold"
+                        FontSize="10"
+                        HeightRequest="36"
+                        HorizontalOptions="End"
+                        Text="FOLLOW"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+                </StackLayout>
+
+                <!--  Profile text  -->
+                <Label
+                    Margin="0,9,0,0"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Text="Adam Anderson"
+                    TextColor="White" />
+                <Label
+                    FontSize="Default"
+                    Text="Software Engineer"
+                    TextColor="White" />
+                <Label
+                    FontSize="Medium"
+                    Text="I have a passion for writing great software"
+                    TextColor="White" />
+                <StackLayout
+                    Margin="0,20"
+                    Orientation="Horizontal"
+                    Spacing="4">
+                    <Image Source="location_icon" VerticalOptions="Center" />
+                    <Label
+                        FontSize="Caption"
+                        Text="Westerville, Ohio"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <BoxView
+                        Margin="16,4"
+                        HeightRequest="0"
+                        HorizontalOptions="End"
+                        VerticalOptions="Fill"
+                        WidthRequest="1"
+                        Color="#707070" />
+                    <Image Source="mobile_icon" VerticalOptions="Center" />
+                    <Label
+                        FontSize="Caption"
+                        Text="(614) 555-1234"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </StackLayout>
+
+            <!--  Activity feed  -->
+            <StackLayout
+                Grid.Row="1"
+                Padding="16,54,16,0"
+                BackgroundColor="#FAF7F7">
+                <StackLayout Padding="3,0" Orientation="Horizontal">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Caption"
+                        Text="Activity"
+                        TextColor="#949494" />
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="EndAndExpand"
+                        Source="grid_icon"
+                        VerticalOptions="Center" />
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="End"
+                        Source="list_icon"
+                        VerticalOptions="Center" />
+                </StackLayout>
+                <FlexLayout
+                    AlignContent="Start"
+                    AlignItems="Center"
+                    Direction="Row"
+                    JustifyContent="Center"
+                    Wrap="Wrap">
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>photo_0</x:String>
+                            <x:String>photo_1</x:String>
+                            <x:String>photo_2</x:String>
+                            <x:String>photo_3</x:String>
+                            <x:String>photo_4</x:String>
+                            <x:String>photo_5</x:String>
+                            <x:String>photo_0</x:String>
+                            <x:String>photo_1</x:String>
+                            <x:String>photo_2</x:String>
+                            <x:String>photo_3</x:String>
+                            <x:String>photo_4</x:String>
+                            <x:String>photo_5</x:String>
+                            <x:String>photo_0</x:String>
+                            <x:String>photo_1</x:String>
+                            <x:String>photo_2</x:String>
+                            <x:String>photo_3</x:String>
+                            <x:String>photo_4</x:String>
+                            <x:String>photo_5</x:String>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Image Margin="3" Source="{Binding .}" />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+            </StackLayout>
+
+
+            <!--  Stats  -->
+            <pancakeView:PancakeView
+                Grid.Row="1"
+                Margin="20,-30,20,0"
+                BackgroundColor="White"
+                CornerRadius="20"
+                HasShadow="True"
+                HeightRequest="72"
+                VerticalOptions="Start">
+                <Grid
+                    Padding="0,8"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        Spacing="0"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Text="500"
+                            TextColor="#202020" />
+                        <Label
+                            FontSize="Caption"
+                            HorizontalOptions="Center"
+                            Text="Posts"
+                            TextColor="#949494" />
+                    </StackLayout>
 
                     <BoxView
-                        Margin="10"
-                        BackgroundColor="#30F23D"
-                        CornerRadius="5"
-                        HeightRequest="10"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="0,12"
+                        HeightRequest="0"
                         HorizontalOptions="End"
-                        VerticalOptions="End"
-                        WidthRequest="10" />
+                        VerticalOptions="Fill"
+                        WidthRequest="1"
+                        Color="#E7E7E7" />
+
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Spacing="0"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Text="12"
+                            TextColor="#202020" />
+                        <Label
+                            FontSize="Caption"
+                            HorizontalOptions="Center"
+                            Text="Followers"
+                            TextColor="#949494" />
+                    </StackLayout>
+
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Margin="0,12"
+                        HeightRequest="0"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Fill"
+                        WidthRequest="1"
+                        Color="#E7E7E7" />
+
+                    <StackLayout
+                        Grid.Column="2"
+                        HorizontalOptions="Center"
+                        Spacing="0"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Text="117"
+                            TextColor="#202020" />
+                        <Label
+                            FontSize="Caption"
+                            HorizontalOptions="Center"
+                            Text="Following"
+                            TextColor="#949494" />
+                    </StackLayout>
+
                 </Grid>
-
-                <!--  Interaction buttons  -->
-                <ImageButton
-                    BackgroundColor="Transparent"
-                    HorizontalOptions="EndAndExpand"
-                    Source="message_icon"
-                    VerticalOptions="Center" />
-                <Button
-                    BackgroundColor="White"
-                    CornerRadius="25"
-                    FontAttributes="Bold"
-                    FontSize="10"
-                    HeightRequest="36"
-                    HorizontalOptions="End"
-                    Text="FOLLOW"
-                    TextColor="Black"
-                    VerticalOptions="Center" />
-            </StackLayout>
-
-            <!--  Profile text  -->
-            <Label
-                Margin="0,9,0,0"
-                FontAttributes="Bold"
-                FontSize="Large"
-                Text="Adam Anderson"
-                TextColor="White" />
-            <Label
-                FontSize="Default"
-                Text="Software Engineer"
-                TextColor="White" />
-            <Label
-                FontSize="Medium"
-                Text="I have a passion for writing great software"
-                TextColor="White" />
-            <StackLayout
-                Margin="0,20"
-                Orientation="Horizontal"
-                Spacing="4">
-                <Image Source="location_icon" VerticalOptions="Center" />
-                <Label
-                    FontSize="Caption"
-                    Text="Westerville, Ohio"
-                    TextColor="White"
-                    VerticalOptions="Center" />
-                <BoxView
-                    Margin="16,4"
-                    HeightRequest="0"
-                    HorizontalOptions="End"
-                    VerticalOptions="Fill"
-                    WidthRequest="1"
-                    Color="#707070" />
-                <Image Source="mobile_icon" VerticalOptions="Center" />
-                <Label
-                    FontSize="Caption"
-                    Text="(614) 555-1234"
-                    TextColor="White"
-                    VerticalOptions="Center" />
-            </StackLayout>
-        </StackLayout>
-
-        <!--  TODO : Activity feed  -->
-        <StackLayout
-            Grid.Row="1"
-            Padding="0"
-            BackgroundColor="#FAF7F7"
-            Spacing="0" />
-
-        <!--  Stats  -->
-        <pancakeView:PancakeView
-            Grid.Row="1"
-            Margin="20,-30,20,0"
-            BackgroundColor="White"
-            CornerRadius="20"
-            HasShadow="True"
-            HeightRequest="72"
-            VerticalOptions="Start">
-            <Grid
-                Padding="0,8"
-                ColumnSpacing="0"
-                RowSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-
-                <StackLayout
-                    Grid.Column="0"
-                    HorizontalOptions="Center"
-                    Spacing="0"
-                    VerticalOptions="Center">
-                    <Label
-                        FontSize="Medium"
-                        HorizontalOptions="Center"
-                        Text="500"
-                        TextColor="#202020" />
-                    <Label
-                        FontSize="Caption"
-                        HorizontalOptions="Center"
-                        Text="Posts"
-                        TextColor="#949494" />
-                </StackLayout>
-
-                <BoxView
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Margin="0,12"
-                    HeightRequest="0"
-                    HorizontalOptions="End"
-                    VerticalOptions="Fill"
-                    WidthRequest="1"
-                    Color="#E7E7E7" />
-
-                <StackLayout
-                    Grid.Column="1"
-                    HorizontalOptions="Center"
-                    Spacing="0"
-                    VerticalOptions="Center">
-                    <Label
-                        FontSize="Medium"
-                        HorizontalOptions="Center"
-                        Text="12"
-                        TextColor="#202020" />
-                    <Label
-                        FontSize="Caption"
-                        HorizontalOptions="Center"
-                        Text="Followers"
-                        TextColor="#949494" />
-                </StackLayout>
-
-                <BoxView
-                    Grid.Row="0"
-                    Grid.Column="2"
-                    Margin="0,12"
-                    HeightRequest="0"
-                    HorizontalOptions="Start"
-                    VerticalOptions="Fill"
-                    WidthRequest="1"
-                    Color="#E7E7E7" />
-
-                <StackLayout
-                    Grid.Column="2"
-                    HorizontalOptions="Center"
-                    Spacing="0"
-                    VerticalOptions="Center">
-                    <Label
-                        FontSize="Medium"
-                        HorizontalOptions="Center"
-                        Text="117"
-                        TextColor="#202020" />
-                    <Label
-                        FontSize="Caption"
-                        HorizontalOptions="Center"
-                        Text="Following"
-                        TextColor="#949494" />
-                </StackLayout>
-
-            </Grid>
-        </pancakeView:PancakeView>
-    </Grid>
+            </pancakeView:PancakeView>
+        </Grid>
+    </ScrollView>
 </ContentPage>
