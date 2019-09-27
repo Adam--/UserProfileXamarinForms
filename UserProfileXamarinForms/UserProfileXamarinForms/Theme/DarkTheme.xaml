@@ -15,4 +15,7 @@
 
     <Color x:Key="ImageOverlayColor">#000000</Color>
     <Color x:Key="ImageOverlayTextColor">#FFFFFF</Color>
+
+    <x:String x:Key="MessageIcon">message_icon_dark</x:String>
+    <x:String x:Key="GridIcon">grid_icon_dark</x:String>
 </ResourceDictionary>
