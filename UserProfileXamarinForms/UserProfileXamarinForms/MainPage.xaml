@@ -49,6 +49,10 @@
                         HorizontalOptions="Start"
                         VerticalOptions="Start">
 
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Grid.GestureRecognizers>
+
                         <pancakeView:PancakeView
                             BorderColor="{DynamicResource PrimaryColor}"
                             BorderThickness="2"

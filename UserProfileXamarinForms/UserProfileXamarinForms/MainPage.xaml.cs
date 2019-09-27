@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UserProfileXamarinForms.Theme;
 using Xamarin.Forms;
 
 namespace UserProfileXamarinForms
@@ -16,6 +17,11 @@ namespace UserProfileXamarinForms
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            ThemeSwitcher.ToggleTheme();
         }
     }
 }
