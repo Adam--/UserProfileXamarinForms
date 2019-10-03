@@ -13,6 +13,6 @@ Presently no iOS support (I don't have an mac), though supporting it should be a
 Design by Rahul Ninave via https://www.uplabs.com/posts/daily-ui-challenge-user-profile
 
 ## Screenshots
-![alt text](screenshot_portrait.jpg "portrait screenshot")
+![light theme portrait screenshot](screenshot_portrait.jpg)
 
-![alt text](screenshot_landscape.jpg "landscape screenshot")
+![dark theme portrait screenshot](screenshot_portrait_dark.jpg)
