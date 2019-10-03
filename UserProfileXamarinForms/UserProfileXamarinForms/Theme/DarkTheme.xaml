@@ -4,7 +4,6 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="NavigationBarColor">#FFFFFF</Color>
     <Color x:Key="PageBackgroundColor">#202020</Color>
 
     <Color x:Key="PrimaryColor">#000000</Color>
@@ -14,8 +13,16 @@
     <Color x:Key="SecondaryTextColor">#949494</Color>
 
     <Color x:Key="ImageOverlayColor">#000000</Color>
-    <Color x:Key="ImageOverlayTextColor">#FFFFFF</Color>
+    <Color x:Key="ImageOverlayTextColor">#CCCCCC</Color>
+    <x:Double x:Key="ImageOverlayOpacity">0.5</x:Double>
 
     <x:String x:Key="MessageIcon">message_icon_dark</x:String>
     <x:String x:Key="GridIcon">grid_icon_dark</x:String>
+
+    <Style TargetType="{x:Type NavigationPage}">
+        <Setter Property="BarBackgroundColor"
+                Value="#000000" />
+        <Setter Property="BarTextColor"
+                Value="#CCCCCC" />
+    </Style>
 </ResourceDictionary>
